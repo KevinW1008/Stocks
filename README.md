@@ -9,7 +9,8 @@ Having fun with stocks and ploting them. Later will play around.
 
 To run, you will need to properly download the appropriate enviroment (instructions below). Then you can git pull the ReactSandbox in.
 
-Link is: https://medium.com/@fiqriismail/setup-wsl-on-windows-10-for-your-javascript-development-with-visual-studio-code-f63f75841e5f
+Link is: ([https://medium.com/@fiqriismail/setup-wsl-on-windows-10-for-your-javascript-development-with-visual-studio-code-f63f75841e5f/]) 
+
 
 I would highly reccomend you go by the way of Ubuntu, but there is also a Windows option if you are so inclined
 
