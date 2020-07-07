@@ -15,6 +15,10 @@ I would highly reccomend you go by the way of Ubuntu, but there is also a Window
 
 There are also some useful websites to catch up on how all this works. I will also be adding in documentation as the design is finalized and more complicated material is added in. 
 
+To run the simulation, go to ./ReactSandbox/helloworld/, and run the command `npm start` to see the website. It is also possible to modify files in the public and src directories (which contain the HTML/CSS/Javascript that make up the website) and see changes in real time while the website is running.
+
 Websites:
 * https://scrimba.com/g/glearnreact
 * https://www.youtube.com/watch?v=nusgoj74a3Y (kind of long, but good for some advanced stuff like CSS)
+
+- Nick Zhang
