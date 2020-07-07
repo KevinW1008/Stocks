@@ -9,12 +9,12 @@ Having fun with stocks and ploting them. Later will play around.
 
 To run, you will need to properly download the appropriate enviroment (instructions below). Then you can git pull the ReactSandbox in.
 
-Link is: ([https://medium.com/@fiqriismail/setup-wsl-on-windows-10-for-your-javascript-development-with-visual-studio-code-f63f75841e5f/]) 
-
+Link is: https://medium.com/@fiqriismail/setup-wsl-on-windows-10-for-your-javascript-development-with-visual-studio-code-f63f75841e5f
 
 I would highly reccomend you go by the way of Ubuntu, but there is also a Windows option if you are so inclined
 
 There are also some useful websites to catch up on how all this works. I will also be adding in documentation as the design is finalized and more complicated material is added in. 
+
 Websites:
 * https://scrimba.com/g/glearnreact
 * https://www.youtube.com/watch?v=nusgoj74a3Y (kind of long, but good for some advanced stuff like CSS)
