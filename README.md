@@ -7,7 +7,7 @@ Having fun with stocks and ploting them. Later will play around.
 * Primarily a mix of javascript using JSX and the React library and good old HTML/CSS. Still in development
 * Will require the python code as a backend, and Flask to help with that transition (to be implemented later)
 
-To run, you will need to properly download the appropriate enviroment (instructions below). Then you can git pull the ReactSandbox in.
+To run, you will need to properly download the appropriate enviroment (instructions below). You will only need to follow Steps 3 and 4. Then you can git pull the ReactSandbox in and remove whatever the default package is
 
 Link is: https://medium.com/@fiqriismail/setup-wsl-on-windows-10-for-your-javascript-development-with-visual-studio-code-f63f75841e5f
 
