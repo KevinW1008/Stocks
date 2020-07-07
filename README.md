@@ -21,4 +21,3 @@ Websites:
 * https://scrimba.com/g/glearnreact
 * https://www.youtube.com/watch?v=nusgoj74a3Y (kind of long, but good for some advanced stuff like CSS)
 
-Nick Zhang
