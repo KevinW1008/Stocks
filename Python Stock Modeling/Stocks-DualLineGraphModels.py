@@ -19,7 +19,9 @@ df = pd.read_csv("TSLA.csv", parse_dates = True, index_col = 0 )
 
 
 df["100ma"] = df["Adj Close"].rolling(window = 100, min_periods = 0).mean()
-print(df.head())
+
+
+plt.figure(figsize= (15,15))
 
 ax1 = plt.subplot2grid((6,1), (0,0), rowspan=5, colspan=1)
 ax2 = plt.subplot2grid((6,1), (5,0), rowspan=1, colspan=1, sharex=ax1) #ax2 will always align its x axis with whatever ax1's is, and visa-versa
@@ -34,5 +36,5 @@ ax1.legend()
 ax2.bar(df.index, df['Volume'], label = "Volume")
 ax2.legend()
 
-
-plt.show()
+plt.subplots_adjust(hspace = 1.2)
+plt.savefig("DualLine.png", bbox_inches = "tight")
