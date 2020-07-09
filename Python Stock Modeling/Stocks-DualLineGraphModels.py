@@ -24,7 +24,7 @@ df["100ma"] = df["Adj Close"].rolling(window = 100, min_periods = 0).mean()
 plt.figure(figsize= (15,15))
 
 ax1 = plt.subplot2grid((6,1), (0,0), rowspan=5, colspan=1)
-ax2 = plt.subplot2grid((6,1), (5,0), rowspan=1, colspan=1, sharex=ax1) #ax2 will always align its x axis with whatever ax1's is, and visa-versa
+ax2 = plt.subplot2grid((6,1), (5,0), rowspan=1, colspan=1, sharex=ax1) #ax2 will always align its x axis with whatever ax1's is, and vice-versa
 
 ax1.set_ylabel("Stock Value/Prices")
 ax2.set_ylabel("Number of Shares\nChanging Hands\n(in millions)", size = 10)
@@ -37,4 +37,4 @@ ax2.bar(df.index, df['Volume'], label = "Volume")
 ax2.legend()
 
 plt.subplots_adjust(hspace = 1.2)
-plt.savefig("DualLine.png", bbox_inches = "tight")
+plt.savefig("/users/Kevin Wang/desktop/DualLine.png", bbox_inches = "tight")
