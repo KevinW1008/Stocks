@@ -24,3 +24,9 @@ Websites:
 HTML/CSS Resources:
 * https://www.w3schools.com/cssref/css_colors.asp (values for CSS)
 
+# Flask (Python Backend)
+To Start a Flash App run these three commands:
+1. export FLASK_APP=flask-backend
+2. FLASK_ENV=development
+3. flask run
+
