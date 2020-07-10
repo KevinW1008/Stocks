@@ -14,12 +14,17 @@ function App() {
     );
   });
 
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
   return (
     <div className="App">
       <Form>
         <Form.Field>
           <Input
             onChange={(e) => setStockTicker(e.target.value)}
+            onSubmit={(e) => handleSubmit(e)}
             icon="search"
             placeholder="Stock Ticker..."
           />
