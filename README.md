@@ -39,7 +39,7 @@ The directory `combinedRunner` is an offshoot of Neil's code that we submitted t
 * We had a lot of test functions in Neil's code that had no use. Those functions have now been removed. 
 
 To run this build:
-* First, go to `/combinedRunner/` and run the flask commands, `export FLASK_APP=backend`
+* First, go to `/combinedRunner/` and run the flask commands, `export FLASK_APP=backend` and `flask run`
 * Next, go to `/combinedRunner/frontend/` and run `npm start`
 
 We should keep older versions up as safeguards, but until then I hope we can used this improved ground to further develop our code - Nick
