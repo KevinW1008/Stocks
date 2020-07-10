@@ -30,3 +30,11 @@ To Start a Flash App run these three commands:
 2. FLASK_ENV=development
 3. flask run
 
+# Items used
+* JSON
+* CSV
+* HTML/CSS
+* JavaScript
+* React
+* Flask
+* Python
