@@ -4,17 +4,23 @@ from matplotlib import style
 import pandas as pd
 import pandas_datareader.data as web
 
+stock_ticker = "MSFT"
+
+def update_stock_ticker(new_ticker):
+    global stock_ticker
+    stock_ticker = new_ticker
+
 def stockrun():
     style.use("bmh")
 
     start = dt.datetime(2015, 1, 1)
     end = dt.datetime.now()
 
-    df = web.DataReader("MSFT", "yahoo", start, end)
+    df = web.DataReader(stock_ticker, "yahoo", start, end)
 
-
-    df.to_csv("MSFT.csv")
-    df = pd.read_csv("MSFT.csv", parse_dates = True, index_col = 0 )
+    csv_name = "%s.csv" % stock_ticker
+    df.to_csv(csv_name)
+    df = pd.read_csv(csv_name, parse_dates = True, index_col = 0 )
 
 
 
