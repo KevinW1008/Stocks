@@ -36,7 +36,8 @@ As of today, we have succeeded in combining the backend and frontend into a rudi
 The directory `combinedRunner` is an offshoot of Neil's code that we submitted today with the below mentioned modifications:
 * Moved some files around and edited paths, so that they make sense and are more readily accessible
 * Kevin's python program use to produce a .csv file every time it was run. This was necessary to produce the graph, but not needed afterwards. The program now removes the .csv file after creating the graph, just before exiting with a return value of 0
-* We had a lot of test functions in Neil's code that had no use. Those functions have now been removed. 
+* Some test functions in Neil's code that had no use. Those functions have now been removed. 
+* In the __init__.py, added some safety checks that were reccomended by the flask website
 
 To run this build:
 * First, go to `/combinedRunner/` and run the flask commands, `export FLASK_APP=backend` and `flask run`
