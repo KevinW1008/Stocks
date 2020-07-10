@@ -30,6 +30,19 @@ To Start a Flash App run these three commands:
 2. FLASK_ENV=development
 3. flask run
 
+# combinedRunner (7/10/20)
+As of today, we have succeeded in combining the backend and frontend into a rudimentary application. There are many bugs and issues that crop up, so we will be working to fix those over time. However, we now have a model to build off of and improve.
+
+The directory 'combinedRunner' is an offshoot of Neil's code that we submitted today, with a couple changes:
+* Moved some files around and edited paths, so that they make sense and are more readily accessible
+* Kevin's python program use to produce a .csv file every time it was run. This was necessary to produce the graph, but not needed afterwards. The program now removes the .csv file after creating the graph, just before exiting with a return value of 0
+* We had a lot of test functions in Neil's code that had no use. Those functions have now been removed. 
+
+To run this build:
+* First, go to '/combinedRunner/' and run the flask commands, 'export FLASK_APP=backend'
+* Next, go to '/combinedRunner/frontend/' and run 'npm start'
+
+We should keep older versions up as safeguards, but until then I hope we can used this improved ground to further develop our code - Nick
 # Items used
 * JSON
 * CSV
