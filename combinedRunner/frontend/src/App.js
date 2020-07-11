@@ -18,7 +18,7 @@ function App() {
             onChange={(e) => setStockTicker(e.target.value)}
             onSubmit={(e) => handleSubmit(e)}
             icon="search"
-            placeholder="Stock Ticker..."
+            placeholder="Search for a S&P 500 Company..."
           />
         </Form.Field>
         <Form.Field>

@@ -40,7 +40,7 @@ The directory `combinedRunner` is an offshoot of Neil's code that we submitted t
 * In the __init__.py, added some safety checks that were reccomended by the flask website
 
 To run this build:
-* First, go to `/combinedRunner/` and run the flask commands, `export FLASK_APP=backend` and `flask run`
+* First, go to `/combinedRunner/` and run the flask commands, `export FLASK_APP=backend` or `set FLASK_APP=backend` if running in a Windows development enviroment, then `flask run`
 * Next, go to `/combinedRunner/frontend/` and run `npm start`
 
 We should keep older versions up as safeguards, but until then I hope we can used this improved ground to further develop our code - Nick
