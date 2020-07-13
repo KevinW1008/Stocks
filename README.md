@@ -1,5 +1,8 @@
 # Stocks
 Having fun with stocks and ploting them. Later will play around.
+Currenty I have two ideas we can do with stocks (machine learning)
+1. Predicting a price for a certain company
+2. Trading at a certain price over a periodof time
 
 # Webpage (Front-end)
 
