@@ -98,8 +98,8 @@ def visualize_Data():
     fig.colorbar(heatmap)
 
     #Add axis tick marks with their respective companies
-    ax1.set_xticks(np.arange(data1.shape[1]) + 0.5, minor=False)
-    ax1.set_yticks(np.arange(data1.shape[0]) + 0.5, minor=False)
+    ax1.set_xticks(np.arange(corr_graph.shape[1]) + 0.5, minor=False)
+    ax1.set_yticks(np.arange(corr_graph.shape[0]) + 0.5, minor=False)
     
     ax1.invert_yaxis()
     ax1.xaxis.tick_top()
@@ -111,7 +111,7 @@ def visualize_Data():
 
     plt.xticks(rotation=90)
     #This sets the limits of our range
-    heatmap1.set_clim(-1,1)
+    heatmap.set_clim(-1,1)
     plt.tight_layout()
     plt.show()
 
