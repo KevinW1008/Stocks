@@ -54,4 +54,4 @@ def stockrun():
     import os
     os.remove("%s.csv" % stock_ticker)
 
-    return 0
+    return {"stock_name": stock_ticker, "price": 0, "year": 2020 }
