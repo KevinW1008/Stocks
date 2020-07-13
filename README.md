@@ -29,7 +29,7 @@ HTML/CSS Resources:
 
 # Flask (Python Backend)
 To Start a Flash App run these three commands:
-1. export FLASK_APP=#Whatever folder your APP is in#
+1. export FLASK_APP=backend #use set if working on windows#
 2. FLASK_ENV=development
 3. flask run
 
