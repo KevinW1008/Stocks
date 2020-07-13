@@ -6,13 +6,17 @@ function App() {
   const [myVar, setMyVar] = useState("");
   const [stockTicker, setStockTicker] = useState("");
 
-  useEffect(() => {
+  /*useEffect(() => {
     fetch("/hello").then((response) =>
       response.json().then((data) => {
         setMyVar(data["message"]);
       })
     );
-  });
+  });*/
+
+  //function handleSubmit(event) {
+  //  event.preventDefault();
+  //}
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -20,11 +24,10 @@ function App() {
 
   return (
     <div className="App">
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Form.Field>
           <Input
             onChange={(e) => setStockTicker(e.target.value)}
-            onSubmit={(e) => handleSubmit(e)}
             icon="search"
             placeholder="Stock Ticker..."
           />
@@ -38,11 +41,9 @@ function App() {
                   "Content-Type": "application/json",
                 },
                 body: JSON.stringify({ name: stockTicker }),
-              });
-
-              if (response.ok) {
-                console.log("response worked");
-              }
+              })
+                .then((response) => response.json())
+                .then((data) => console.log(data));
             }}
           >
             Submit
@@ -51,7 +52,9 @@ function App() {
       </Form>
       {myVar}
       <div>
-        <img width="500" alt="timer" src={require("./images/DualLine.png")} />
+        {
+          //<img width="500" alt="timer" src={require("./images/DualLine.png")} />
+        }
       </div>
       {stockTicker} Stock
     </div>

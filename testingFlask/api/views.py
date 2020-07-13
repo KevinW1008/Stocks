@@ -14,7 +14,7 @@ def fetch_stock():
     new_ticker = ticker_data["name"]
     update_stock_ticker(new_ticker)
     return_val = stockrun()
-    return jsonify({"message" : return_val})
+    return jsonify(return_val)
 
 @main.route('/idiot')
 def idiot():

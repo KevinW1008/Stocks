@@ -45,4 +45,4 @@ def stockrun():
     plt.subplots_adjust(hspace = 1.2)
     plt.savefig("../react-with-flask/src/images/DualLine.png", bbox_inches = "tight")
 
-    return 100
+    return {"stock_name": stock_ticker, "price": 0, "year": 2020 }
