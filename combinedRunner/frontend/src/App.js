@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
 import { Button, Input, Form } from "semantic-ui-react";
-import { Img } from "react-image";
-import VisibilitySensor from "react-visibility-se";
 
 function App() {
   // Allows the website user to modify the stock ticker to look up
   const [stockTicker, setStockTicker] = useState("");
-
   function handleSubmit(event) {
     event.preventDefault();
   }
@@ -37,10 +34,18 @@ function App() {
           >
             Submit
           </Button>
+          <Button
+            onClick={async () => {
+              document.getElementById("timer").src =
+                "/static/media/DualLine.c8ec48c9.png";
+            }}
+          >
+            Load in the Image
+          </Button>
         </Form.Field>
       </Form>
       <div>
-        <img width="500" alt="timer" src={require("./DualLine.png")} />
+        <img width="500" alt="thing" src={require("./timer.png")} id="timer" />
       </div>
       {stockTicker} Stock
     </div>
