@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { Button, Input, Form } from "semantic-ui-react";
+import { Img } from "react-image";
+import VisibilitySensor from "react-visibility-se";
 
 function App() {
   // Allows the website user to modify the stock ticker to look up
@@ -28,11 +30,9 @@ function App() {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name: stockTicker }),
-              });
-
-              if (response.ok) {
-                console.log("response worked");
-              }
+              })
+                .then((response) => response.json())
+                .then((data) => console.log(data));
             }}
           >
             Submit
@@ -46,5 +46,5 @@ function App() {
     </div>
   );
 }
-
+//<img width="500" alt="timer" src={require("./DualLine.png")} />
 export default App;
