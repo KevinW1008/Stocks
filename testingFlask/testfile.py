@@ -43,6 +43,7 @@ def stockrun():
     ax2.legend()
 
     plt.subplots_adjust(hspace = 1.2)
-    plt.savefig("../react-with-flask/src/images/DualLine.png", bbox_inches = "tight")
+    file_path_string = "../react-with-flask/src/images/%s.png" % stock_ticker
+    plt.savefig(file_path_string, bbox_inches = "tight")
 
     return {"stock_name": stock_ticker, "price": 0, "year": 2020 }

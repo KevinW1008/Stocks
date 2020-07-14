@@ -5,25 +5,19 @@ import { Button, Input, Form } from "semantic-ui-react";
 function App() {
   const [myVar, setMyVar] = useState("");
   const [stockTicker, setStockTicker] = useState("");
+  const [imageName, setImageName] = useState("defaultImage");
 
-  /*useEffect(() => {
-    fetch("/hello").then((response) =>
-      response.json().then((data) => {
-        setMyVar(data["message"]);
-      })
-    );
-  });*/
-
-  //function handleSubmit(event) {
-  //  event.preventDefault();
-  //}
-
+  // This function is supposed to prevent the submission of the form from refreshing the page,
+  // but I'm not sure if it's working as intended or not. Seems like it may be
   function handleSubmit(event) {
     event.preventDefault();
   }
 
   return (
     <div className="App">
+      {
+        // Attempting to make the submission of the form run the handleSubmit function above
+      }
       <Form onSubmit={handleSubmit}>
         <Form.Field>
           <Input
@@ -43,7 +37,7 @@ function App() {
                 body: JSON.stringify({ name: stockTicker }),
               })
                 .then((response) => response.json())
-                .then((data) => console.log(data));
+                .then((data) => setImageName(data["name"]));
             }}
           >
             Submit
@@ -53,8 +47,20 @@ function App() {
       {myVar}
       <div>
         {
-          //<img width="500" alt="timer" src={require("./images/DualLine.png")} />
+          // The image source now points to the file with the stock ticker's name
+          // so that each stock will produce a file of its own (ex: GOOGL.png). This was meant to fix
+          // the issue of refreshing caused by the file being displayed to be deleted and rewritten but
+          // the issue is still happening. When I type a stock ticker it seems like it is displaying
+          // the new image that I want correctly for a split second without refreshing the page but then
+          // for some reason, the page still decides to refresh after and revert back to the default timer image
+          // that I'm using as a placeholder. This is the roadblock that I left off on and am not sure how to fix
+          // yet.
         }
+        <img
+          width="500"
+          alt="timer"
+          src={require(`./images/${imageName}.png`)}
+        />
       </div>
       {stockTicker} Stock
     </div>
