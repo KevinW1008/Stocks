@@ -33,12 +33,6 @@ def stockrun():
 
     df = web.DataReader(stock_ticker, "yahoo", start, end)
 
-    csv_name = "%s.csv" % stock_ticker
-    df.to_csv(csv_name)
-    df = pd.read_csv(csv_name, parse_dates = True, index_col = 0 )
-
-
-
     df["100ma"] = df["Adj Close"].rolling(window = 100, min_periods = 0).mean()
 
     
@@ -125,14 +119,13 @@ def projectionCalculator():
         next_unix += 86400
         df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i]
 
-    df.to_csv("%s.csv" % stock_ticker)
 
     # print('Our linear regression model computes a beta coefficient (slope) of:')
     # print(clf.coef_[0].round())
     # print('Tomorrow prices is thus to be predicted as:')
     # print((clf.coef_[0] + dfog['Adj Close'][-1]).round())
 
-    plt.figure(figsize= (15,18))
+    plt.figure(figsize= (15,15))
     plt.plot(dfog['Adj Close'], label= 'Adj CLose')
     plt.plot(df['Forecast'], label= 'Forecast')
     plt.xlabel('Date')
