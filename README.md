@@ -11,11 +11,9 @@ Nicholas Zhang: jazhang1999@gmail.com
 # Languages - Frameworks - Tools used
 * Python (Scikit-learn; Pandas; Prophet; Matplotlib)
 * JavaScript
+* HTML/CSS
 * React
 * Flask
-* HTML/CSS
-* JSON
-* CSV
 
 # React Interface (Front-end)
 
