@@ -2,7 +2,7 @@
 Collaborators: 
 Neil Shah: neilshah20@gmail.com 
 Kevin Wang: kwang10082000@gmail.com
-Nicolas Zhang: jazhang1999@gmail.com 
+Nicholas Zhang: jazhang1999@gmail.com 
 
 # Objectives
 1. Create a front-end interface with React that will communicate with back-end API from Flask. 
