@@ -19,7 +19,6 @@ import math
 #############################################################################
 
 style.use("ggplot")
-scaler = StandardScaler()
 start = dt.datetime(2015, 1, 1)
 end = dt.datetime.now()
 
@@ -169,10 +168,14 @@ def Predicting_PriceV1(ticker):
     print('Tomorrow prices is thus to be predicted as:')
     print((clf.coef_[0] + dfog['Adj Close'][-1]).round())
 
-    dfog['Adj Close'].plot()
-    df['Forecast'].plot()
+
+    plt.plot(dfog['Adj Close'])
+    plt.plot(df['Forecast'])
     plt.legend(loc=4)
     plt.title('%s\'s Adjusted Close History and Prediction Model' % ticker)
     plt.xlabel('Date')
     plt.ylabel('Price')
     plt.show()
+
+
+Predicting_PriceV1("TSLA")

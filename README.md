@@ -1,10 +1,21 @@
-# Stocks
-Having fun with stocks and ploting them. Later will play around.
-Currenty I have two ideas we can do with stocks (machine learning)
-1. Predicting a price for a certain company
-2. Trading at a certain price over a periodof time
+# Stock Modeling Project 
+Collaborators: 
+Neil Shah: neilshah20@gmail.com 
+Kevin Wang: kwang10082000@gmail.com
+Nicholas Zhang: jazhang1999@gmail.com 
 
-# Webpage (Front-end)
+# Objectives
+1. Create a front-end interface with React that will communicate with back-end API from Flask. 
+2. Showcase the ability to search different companies and pull their respective stock data. Then showcase a model that graphs their historical/current data as well as predictions by implementing rudimentary machine learning tools
+
+# Languages - Frameworks - Tools used
+* Python (Scikit-learn; Pandas; Prophet; Matplotlib)
+* JavaScript
+* HTML/CSS
+* React
+* Flask
+
+# React Interface (Front-end)
 
 * Includes one new directory ReactSandbox
 * Primarily a mix of javascript using JSX and the React library and good old HTML/CSS. Still in development
@@ -27,7 +38,7 @@ Websites:
 HTML/CSS Resources:
 * https://www.w3schools.com/cssref/css_colors.asp (values for CSS)
 
-# Flask (Python Backend)
+# Flask App (Python Backend)
 To Start a Flash App run these three commands:
 1. export FLASK_APP=backend #use set if working on windows#
 2. FLASK_ENV=development
@@ -46,12 +57,4 @@ To run this build:
 * First, go to `/combinedRunner/` and run the flask commands, `export FLASK_APP=backend` or `set FLASK_APP=backend` if running in a Windows development enviroment, then `flask run`
 * Next, go to `/combinedRunner/frontend/` and run `npm start`
 
-We should keep older versions up as safeguards, but until then I hope we can used this improved ground to further develop our code - Nick
-# Items used
-* JSON
-* CSV
-* HTML/CSS
-* JavaScript
-* React
-* Flask
-* Python
+
