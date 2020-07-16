@@ -5,6 +5,8 @@ import { Button, Input, Form } from "semantic-ui-react";
 function App() {
   // Allows the website user to modify the stock ticker to look up
   const [stockTicker, setStockTicker] = useState("");
+  const [json, setJson] = useState([]);
+
   function handleSubmit(event) {
     event.preventDefault();
   }
@@ -29,25 +31,18 @@ function App() {
                 body: JSON.stringify({ name: stockTicker }),
               })
                 .then((response) => response.json())
-                .then((data) => console.log(data));
+                .then((data) => setJson(data));
             }}
           >
             Submit
           </Button>
-          <Button
-            onClick={async () => {
-              document.getElementById("timer").src =
-                "/static/media/DualLine.c8ec48c9.png";
-            }}
-          >
-            Load in the Image
-          </Button>
         </Form.Field>
       </Form>
       <div>
-        <img width="500" alt="thing" src={require("./timer.png")} id="timer" />
+        <img width="500" alt="thing" src={"./DualLine.png"} id="timer" />
       </div>
       {stockTicker} Stock
+      {json.img_src}
     </div>
   );
 }
