@@ -9,11 +9,7 @@ Nicholas Zhang: jazhang1999@gmail.com
 2. Showcase the ability to search different companies and pull their respective stock data. Then showcase a model that graphs their historical/current data as well as predictions by implementing rudimentary machine learning tools
 
 # Languages - Frameworks - Tools used
-* Python
-  -Scikit-learn
-  -Pandas
-  -Prophet
-  -Matplotlib
+* Python (Scikit-learn; Pandas; Prophet; Matplotlib)
 * JavaScript
 * React
 * Flask
