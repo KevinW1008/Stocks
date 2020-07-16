@@ -13,7 +13,7 @@ end = dt.datetime.now()
 
 try:
    
-    df = web.DataReader("Asshole", "yahoo", start, end)
+    df = web.DataReader("TSLA", "yahoo", start, end)
     df.to_csv("TSLA.csv")
     df = pd.read_csv("TSLA.csv", parse_dates = True, index_col = 0 )
 
