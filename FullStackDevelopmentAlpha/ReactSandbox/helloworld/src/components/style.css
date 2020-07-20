@@ -1,0 +1,108 @@
+
+body {
+    margin: 0;
+}
+
+.header {
+    height: 100px;
+    background-color: #323;
+    color: whitesmoke;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    height: 80px;
+    background-color: #323;
+    color: hotpink;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    height: 100px;
+    background-color: #323;
+    color: whitesmoke;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer ul {
+	padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.footer li {
+	display: inline;
+}
+
+.footer a {
+	color: #d9d9d9;
+	text-decoration: none;
+    font-size: 30px;
+    padding: 0px 150px;
+    word-wrap: normal;
+    display: inline-block;
+}
+
+/* .footer {
+    height: 100px;
+    background-color: goldenrod;
+    color: whitesmoke;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 40px;
+    display: flex;
+    margin-top: 20px;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+} */
+.todo-list {
+    background-color: darkgrey;
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #efefef;
+    box-shadow:
+    /* The top layer shadow */
+        0 1px 1px rgba(0,0,0,0.15),
+            /* The second layer */
+        0 10px 0 -5px #eee,
+            /* The second layer shadow */
+        0 10px 1px -4px rgba(0,0,0,0.15),
+            /* The third layer */
+        0 20px 0 -10px #eee,
+            /* The third layer shadow */
+        0 20px 1px -9px rgba(0,0,0,0.15);
+    padding: 30px;
+    
+}
+
+.todo-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 20px 0;
+    width: 70%;
+    border-bottom: 1px solid #cecece;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    color: #333333;
+}
