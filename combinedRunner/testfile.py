@@ -78,7 +78,7 @@ def projectionCalculator():
     #Fill any empty columns with -99999 as good practice
     df.fillna(value=-99999, inplace=True)
     #How many days we want to forecast out, lets do 1 percent of the data
-    forecast_out = int(.01 * math.ceil(len(df)))
+    forecast_out = int(.03 * math.ceil(len(df)))
 
     #new calumn in df that contains shifted values up 
     #Label contains a percentage of training data
@@ -96,7 +96,7 @@ def projectionCalculator():
     df.dropna(inplace=True)
     y = np.array(df['label'])
     
-    X_train, X_test, y_train, y_test = sk.train_test_split(X, y, test_size=0.5)
+    X_train, X_test, y_train, y_test = sk.train_test_split(X, y, test_size=0.2)
 
     #n_jobs=-1 ensures the CPU will use all available threads to process
     clf = LinearRegression(n_jobs=-1)
