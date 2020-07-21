@@ -55,10 +55,10 @@ function App() {
       >
         <img
           class="ui big image"
-          style={{ float: "left", paddingRight: "25px" }}
+          style={{ float: "left", paddingRight: "25px",  paddingLeft: "25px", paddingBottom: "20px" }}
           src={require("./DualLine.png")}
         />
-        <p className="para" style={{ paddingTop: "25px" }}>
+        <p className="para" style={{ paddingTop: "25px", paddingRight: "25px" }}>
           This model graphs the Adjusted Close price, the 100-Day-Rolling
           Average, and the volume of purchases made for the specified company.
           The 100-Day Average is a mid-term trend-following technical indicator.
@@ -77,12 +77,16 @@ function App() {
       >
         <img
           class="ui big image"
-          style={{ float: "left", paddingRight: "25px" }}
+          style={{ float: "left", paddingRight: "25px", paddingLeft: "25px", paddingBottom: "20px"  }}
           src={require("./Projection.png")}
         />
-        <p className="para" style={{ paddingTop: "25px" }}>
+        <p className="para" style={{ paddingTop: "25px", paddingRight: "25px" }}>
           This model graphs the Adjusted Close prices starting from 2015 to
-          today's date.
+          today's date, as well as a linear regression model predicting the 
+          stock's adjusted closing prices for final 20% of the time frame (Indicated in red).
+          Based on this model, a prediction above actual prices may imply the stock is undervalued. 
+          The same deduction can be made from a prediction that is below actual prices, which may imply that a stock is overvalued.
+          This data must be taken with a grain of salt due to the rudimentary nature of the linear regression model.
         </p>
       </div>
 
