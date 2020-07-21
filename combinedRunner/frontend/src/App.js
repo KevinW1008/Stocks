@@ -50,16 +50,16 @@ function App() {
         <img width="800" alt="timer" src={require("./DualLine.png")} />
         <p className="para">
           The model above graphs the Adjusted Close price, 100 day rolling
-          average, as well as the volume of purchases made for the user defined
+          average, as well as the volume of purchases made for the specified
           company.
         </p>
 
         <img width="800" alt="timer" src={require("./Projection.png")} />
         <p className="para">
           The model above graphs the Adjusted Close prices starting from 2015 to
-          today's date. Using Scikit-Learn, machine learning tool, it takes a
-          percentage of the data, trains it, and then predicts a model of the
-          remaining percentage of the data.
+          today's date. Using the machine leanring tool, Scikit-Learn, a
+          percentage of the data is trained upon and used to predict a model for
+          the remaining percentage of data.
         </p>
       </div>
 
@@ -77,9 +77,9 @@ function App() {
         />
         <p className="para" style={{ paddingTop: "25px" }}>
           The model above graphs the Adjusted Close prices starting from 2015 to
-          today's date. Using Scikit-Learn, machine learning tool, it takes a
-          percentage of the data, trains it, and then predicts a model of the
-          remaining percentage of the data.
+          today's date. Using the machine leanring tool, Scikit-Learn, a
+          percentage of the data is trained upon and used to predict a model for
+          the remaining percentage of data.
         </p>
       </div>
 

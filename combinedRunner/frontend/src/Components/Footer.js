@@ -103,7 +103,7 @@ function Footer() {
                 />
               </List>
             </Grid.Column>
-            {/*<Grid.Column width={7}>
+            {/*<Grid.Column width={6}>
               <Header as="h4" inverted>
                 Footer Header
               </Header>
