@@ -1,6 +1,6 @@
 
 from flask import Blueprint, jsonify, request
-from testfile import stockrun, update_stock_ticker
+from testfile import stockrun, update_stock_ticker, projectionCalculator
 
 main = Blueprint('main', __name__)
 
@@ -14,6 +14,7 @@ def fetch_stock():
     ticker_data = request.get_json()
     new_ticker = ticker_data["name"]
     update_stock_ticker(new_ticker)
+    projectionCalculator()
     return_val = stockrun()
     return jsonify(return_val)
 

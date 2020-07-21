@@ -28,8 +28,8 @@ function Heading() {
         inverted
         style={{
           fontSize: "6em",
-          fontWeight: "normal",
-          fontFamily: "Avenir",
+          fontWeight: "bold",
+          fontFamily: "Josefin Sans",
           paddingTop: "25px",
         }}
       />
@@ -40,6 +40,7 @@ function Heading() {
         style={{
           fontSize: "2.5em",
           fontWeight: "normal",
+          fontFamily: "Josefin Sans",
           paddingBottom: "25px",
         }}
       />

@@ -5,7 +5,7 @@ import Heading from "./Components/Heading";
 import Footer from "./Components/Footer";
 
 function App() {
-  // Allows the website user to modify the stock ticker to look up
+  // Hook: Allows the website user to modify the stock ticker to look up
   const [stockTicker, setStockTicker] = useState("");
 
   function handleSubmit(event) {
@@ -14,51 +14,72 @@ function App() {
 
   return (
     <div className="App">
+      {/* Header is constructed in Header.js */}
       <Heading />
-      <Form>
-        <Form.Field>
-          <Input
-            onChange={(e) => setStockTicker(e.target.value)}
-            onSubmit={(e) => handleSubmit(e)}
-            icon="search"
-            placeholder="Enter a Stock Ticker..."
-          />
-        </Form.Field>
 
-        <Form.Field>
-          <Button
-            onClick={async () => {
-              const response = await fetch("/fetch_stock", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ name: stockTicker }),
-              })
-                .then((response) => response.json())
-                .then((data) => console.log(data));
-            }}
-          >
-            Submit
-          </Button>
-        </Form.Field>
-      </Form>
-
-      <div>
-        <img width="500" alt="timer" src={require("./DualLine.png")} />
-        <img width="500" alt="timer" src={require("./Projection.png")} />
+      {/* Creating the submit button */}
+      <div
+        class="ui action input"
+        style={{ paddingTop: "25px", paddingBottom: "25px" }}
+      >
+        <input
+          type="text"
+          onChange={(e) => setStockTicker(e.target.value)}
+          onSubmit={(e) => handleSubmit(e)}
+          placeholder="Enter a Stock Ticker..."
+        />
+        <button
+          className="ui button"
+          style={{ background: "#1B1C1D" }}
+          onClick={async () => {
+            const response = await fetch("/fetch_stock", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ name: stockTicker }),
+            })
+              .then((response) => response.json())
+              .then((data) => console.log(data));
+          }}
+        >
+          <text style={{ color: "#FFFFFF" }}>Search</text>
+        </button>
       </div>
 
-      {/* Kevin's Manifesto */}
-      <div>
-        <p id="p1">
-          The model on the left graphs the Adjusted Close price, 100 day rolling
+      {/* Content of our page */}
+      <div className="content">
+        <img width="800" alt="timer" src={require("./DualLine.png")} />
+        <p className="para">
+          The model above graphs the Adjusted Close price, 100 day rolling
           average, as well as the volume of purchases made for the user defined
           company.
         </p>
-        <p id="p2">
-          The model on the right graphs the Adjusted Close prices starting from
-          2015 to today's date. Using Scikit-Learn, machine learning tool, it
-          takes a percentage of the data, trains it, and then predicts a model
-          on the remaing percentages of the data.
+
+        <img width="800" alt="timer" src={require("./Projection.png")} />
+        <p className="para">
+          The model above graphs the Adjusted Close prices starting from 2015 to
+          today's date. Using Scikit-Learn, machine learning tool, it takes a
+          percentage of the data, trains it, and then predicts a model of the
+          remaining percentage of the data.
+        </p>
+      </div>
+
+      <div
+        style={{
+          paddingTop: "25px",
+          borderBottom: "solid 1px silver",
+          overflow: "hidden",
+        }}
+      >
+        <img
+          class="ui big image"
+          style={{ float: "left" }}
+          src={require("./Projection.png")}
+        />
+        <p className="para" style={{ paddingTop: "25px" }}>
+          The model above graphs the Adjusted Close prices starting from 2015 to
+          today's date. Using Scikit-Learn, machine learning tool, it takes a
+          percentage of the data, trains it, and then predicts a model of the
+          remaining percentage of the data.
         </p>
       </div>
 
