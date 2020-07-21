@@ -1,6 +1,6 @@
 
 from flask import Blueprint, jsonify, request
-from testfile import stockrun, update_stock_ticker, projectionCalculator
+from StockModelingFunctions import stockrun, update_stock_ticker, projectionCalculator
 
 main = Blueprint('main', __name__)
 

@@ -118,12 +118,6 @@ def projectionCalculator():
         next_unix += 86400
         df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i]
 
-
-    # print('Our linear regression model computes a beta coefficient (slope) of:')
-    # print(clf.coef_[0].round())
-    # print('Tomorrow prices is thus to be predicted as:')
-    # print((clf.coef_[0] + dfog['Adj Close'][-1]).round())
-
     plt.figure(figsize= (15,15))
     plt.plot(dfog['Adj Close'], label= 'Adj CLose')
     plt.plot(df['Forecast'], label= 'Forecast')
