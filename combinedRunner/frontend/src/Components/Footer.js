@@ -22,7 +22,7 @@ function Footer() {
         <Grid divided inverted stackable>
           <Grid.Row>
             <Grid.Column width={3}>
-              <Header inverted as="h4" content="Contributors' LinkedIn" />
+              <Header inverted as="h4" content="LinkedIn" />
               <List link inverted>
                 <List.Item>
                   <List.Content>
@@ -75,7 +75,7 @@ function Footer() {
             </Grid.Column>
 
             <Grid.Column width={3}>
-              <Header inverted as="h4" content="GitHub Info" />
+              <Header inverted as="h4" content="GitHub" />
               <List link inverted>
                 <List.Item
                   as="a"
@@ -102,6 +102,13 @@ function Footer() {
                   target="_blank"
                 />
               </List>
+            </Grid.Column>
+
+            <Grid.Column width={3}>
+              <img
+                width="100"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1004px-Google_%22G%22_Logo.svg.png"
+              ></img>
             </Grid.Column>
             {/*<Grid.Column width={6}>
               <Header as="h4" inverted>
