@@ -46,23 +46,6 @@ function App() {
       </div>
 
       {/* Content of our page */}
-      <div className="content">
-        <img width="800" alt="timer" src={require("./DualLine.png")} />
-        <p className="para">
-          The model above graphs the Adjusted Close price, 100 day rolling
-          average, as well as the volume of purchases made for the specified
-          company.
-        </p>
-
-        <img width="800" alt="timer" src={require("./Projection.png")} />
-        <p className="para">
-          The model above graphs the Adjusted Close prices starting from 2015 to
-          today's date. Using the machine leanring tool, Scikit-Learn, a
-          percentage of the data is trained upon and used to predict a model for
-          the remaining percentage of data.
-        </p>
-      </div>
-
       <div
         style={{
           paddingTop: "25px",
@@ -72,14 +55,34 @@ function App() {
       >
         <img
           class="ui big image"
-          style={{ float: "left" }}
+          style={{ float: "left", paddingRight: "25px" }}
+          src={require("./DualLine.png")}
+        />
+        <p className="para" style={{ paddingTop: "25px" }}>
+          This model graphs the Adjusted Close price, the 100-Day-Rolling
+          Average, and the volume of purchases made for the specified company.
+          The 100-Day Average is a mid-term trend-following technical indicator.
+          It uses 100 day periods of data to analyze the movement of stock
+          prices. When the price of a security is above its 100-day moving
+          average, it's considered bullish, and when the price is below, it's
+          considered bearish.
+        </p>
+      </div>
+      <div
+        style={{
+          paddingTop: "25px",
+          borderBottom: "solid 1px silver",
+          overflow: "hidden",
+        }}
+      >
+        <img
+          class="ui big image"
+          style={{ float: "left", paddingRight: "25px" }}
           src={require("./Projection.png")}
         />
         <p className="para" style={{ paddingTop: "25px" }}>
-          The model above graphs the Adjusted Close prices starting from 2015 to
-          today's date. Using the machine leanring tool, Scikit-Learn, a
-          percentage of the data is trained upon and used to predict a model for
-          the remaining percentage of data.
+          This model graphs the Adjusted Close prices starting from 2015 to
+          today's date.
         </p>
       </div>
 

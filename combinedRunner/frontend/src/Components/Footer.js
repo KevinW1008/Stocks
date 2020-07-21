@@ -73,7 +73,6 @@ function Footer() {
                 </List.Item>
               </List>
             </Grid.Column>
-
             <Grid.Column width={3}>
               <Header inverted as="h4" content="GitHub" />
               <List link inverted>
@@ -103,13 +102,13 @@ function Footer() {
                 />
               </List>
             </Grid.Column>
-
-            <Grid.Column width={3}>
-              <img
-                width="100"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1004px-Google_%22G%22_Logo.svg.png"
-              ></img>
+            <Grid.Column width={6}>
+              <Header as="h4" inverted>
+                Footer Header
+              </Header>
+              <p>Any man who must say I am the king is no true king</p>
             </Grid.Column>
+
             {/*<Grid.Column width={6}>
               <Header as="h4" inverted>
                 Footer Header
