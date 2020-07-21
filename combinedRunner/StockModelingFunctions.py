@@ -15,10 +15,10 @@ from sklearn.linear_model import LinearRegression
 
 import numpy as np
 
-
 import math
 
-stock_ticker = "MSFT"
+#Default stock 
+stock_ticker = "TSLA"
 
 def update_stock_ticker(new_ticker):
     global stock_ticker
@@ -27,32 +27,40 @@ def update_stock_ticker(new_ticker):
 def stockrun():
     style.use("bmh")
 
+    #Setting time period when extracting stock data
     start = dt.datetime(2015, 1, 1)
     end = dt.datetime.now()
 
+    #Extracts param stock company from Yahoo 
     df = web.DataReader(stock_ticker, "yahoo", start, end)
 
+    #This calculates a 100 day rolling average
     df["100ma"] = df["Adj Close"].rolling(window = 100, min_periods = 0).mean()
 
-    
     plt.figure(figsize= (15,15))
 
+    #There will be two subplots, ax1 and ax2
     ax1 = plt.subplot2grid((6,1), (0,0), rowspan=5, colspan=1)
+    ax1.tick_params(axis='both', which='major', labelsize=20)
+    ax1.tick_params(axis='both', which='minor', labelsize=15)
     ax2 = plt.subplot2grid((6,1), (5,0), rowspan=1, colspan=1, sharex=ax1) #ax2 will always align its x axis with whatever ax1's is, and visa-versa
+    ax2.tick_params(axis='both', which='major', labelsize= 20) 
+    ax2.tick_params(axis='both', which='minor', labelsize=15)
 
-    ax1.set_ylabel("Stock Value/Prices")
-    ax2.set_ylabel("Number of Shares\nChanging Hands\n(in millions)", size = 10)
-    ax2.set_xlabel("Year")
+    ax1.set_ylabel("Stock Value/Prices", size = 20)
+    ax2.set_ylabel("Number of Shares\nChanging Hands\n(in millions)", size = 20)
+    ax2.set_xlabel("Year", size = 15)
 
-    ax1.set_title("%s's Adjusted Close and 100 Day Rolling Data" % stock_ticker, fontsize=36)
+    #First subplot graphs Adjusted Close prices and 100 Day Rolling Averages
+    ax1.set_title("%s's Adjusted Close and 100 Day Rolling Avg Data" % stock_ticker, fontsize=30)
     ax1.plot(df.index, df['Adj Close'], label ="Adj Close")
-
-    ax2.set_title("%s's Volume Data" % stock_ticker, fontsize=20)
+    #Second subplot graphs Volume of stock purchases 
+    ax2.set_title("%s's Volume Data" % stock_ticker, fontsize= 20)
     ax1.plot(df.index, df['100ma'], label ="100 Rolling Avg")
 
-    ax1.legend()
+    ax1.legend(prop={'size': 20})
     ax2.bar(df.index, df['Volume'], label = "Volume")
-    ax2.legend()
+    ax2.legend(prop={'size': 20})
     plt.subplots_adjust(hspace = 1.2)
     plt.savefig("./frontend/src/DualLine.png", bbox_inches = "tight")
 
@@ -119,10 +127,12 @@ def projectionCalculator():
         df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)]+[i]
 
     plt.figure(figsize= (15,15))
-    plt.plot(dfog['Adj Close'], label= 'Adj CLose')
+    plt.title('%s\'s Adjusted Close History and Prediction Model' % stock_ticker, fontsize=30)
+    plt.plot(dfog['Adj Close'], label= 'Adj Close')
     plt.plot(df['Forecast'], label= 'Forecast')
-    plt.xlabel('Date')
-    plt.ylabel('Price')
-    plt.legend()
-    plt.title('%s\'s Adjusted Close History and Prediction Model' % stock_ticker, fontsize=36)
+    plt.xlabel('Date', size= 20)
+    plt.ylabel('Price', size= 20)
+    plt.tick_params(axis='both', which='major', labelsize=20)
+    plt.legend(prop={'size': 20})
     plt.savefig("./frontend/src/Projection.png", bbox_inches = "tight") 
+
