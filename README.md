@@ -9,6 +9,20 @@ Nicholas Zhang: jazhang1999@gmail.com
 2. Showcase the ability to search different companies and pull their respective stock data. Then showcase a model that graphs their historical/current data
 3. Practice using machine learning tools such as Scikit-learn and Prophet
 
+# Showcase of Product
+1. This is the main landing page. Two figures will be shown on this page. This is the first figure:
+![1](https://github.com/KevinW1008/Stocks/blob/master/Repo_images/1.PNG?raw=true)
+
+2. This is the second figure. Links in the footer are active. They can take you to our LinkedIn pages, our Github project repo and personal repos, as well as useful links if one wishes to dive deeper in the world of finance and stocks: 
+![2](https://github.com/KevinW1008/Stocks/blob/master/Repo_images/2.PNG?raw=true)
+
+3. One can search a new company by inputing a valid Stock Ticker. Here we will be searching up Apple Inc. The page will update the figures. Invalid stock tickers will maintain the previous figures, allowing you to reinput.
+![2](https://github.com/KevinW1008/Stocks/blob/master/Repo_images/3.PNG?raw=true)
+![2](https://github.com/KevinW1008/Stocks/blob/master/Repo_images/4.PNG?raw=true)
+![2](https://github.com/KevinW1008/Stocks/blob/master/Repo_images/5.PNG?raw=true)
+
+
+
 # Languages - Frameworks - Tools used
 * Python (Scikit-learn; Pandas; Prophet; Matplotlib)
 * JavaScript
