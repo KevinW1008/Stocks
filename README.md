@@ -30,6 +30,14 @@ Nicholas Zhang: jazhang1999@gmail.com
 * React
 * Flask
 
+# How to Run the Project
+To run this build:
+* First, go to `/src/` and run the flask commands: `export FLASK_APP=backend` or `set FLASK_APP=backend` if running in a Windows development enviroment, then `flask run`
+* Next, go to `/src/frontend/` and run `npm start`
+
+# FullStackDevelopmentAlpha
+This folder includes numerous versions of our React and Python code. A "Python Stock Modeling" folder specifically includes a variety of different models. Many were not included in the final product simply due to selection. View at your leisure.
+
 # React Interface (Front-end)
 
 * Includes one new directory ReactSandbox
@@ -55,21 +63,9 @@ HTML/CSS Resources:
 
 # Flask App (Python Backend)
 To Start a Flash App run these three commands:
-1. export FLASK_APP=backend #use set if working on windows#
+1. export FLASK_APP=backend 
 2. FLASK_ENV=development
 3. flask run
 
-# combinedRunner (7/10/20)
-As of today, we have succeeded in combining the backend and frontend into a rudimentary application. There are many bugs and issues that crop up, so we will be working to fix those over time. However, we now have a model to build off of and improve with some quality of life changes.
-
-The directory `combinedRunner` is an offshoot of Neil's code that we submitted today with the below mentioned modifications:
-* Moved some files around and edited paths, so that they make sense and are more readily accessible
-* Kevin's python program use to produce a .csv file every time it was run. This was necessary to produce the graph, but not needed afterwards. The program now removes the .csv file after creating the graph, just before exiting with a return value of 0
-* Some test functions in Neil's code that had no use. Those functions have now been removed. 
-* In the __init__.py, added some safety checks that were reccomended by the flask website
-
-To run this build:
-* First, go to `/combinedRunner/` and run the flask commands, `export FLASK_APP=backend` or `set FLASK_APP=backend` if running in a Windows development enviroment, then `flask run`
-* Next, go to `/combinedRunner/frontend/` and run `npm start`
 
 
