@@ -7,7 +7,7 @@ Nicholas Zhang: jazhang1999@gmail.com
 # Objectives
 1. Create a front-end interface with React that will communicate with back-end API from Flask. 
 2. Showcase the ability to search different companies and pull their respective stock data. Then showcase a model that graphs their historical/current data
-3. Practice using machine learning tools such as Scikit-learn and Prophet
+3. Practice using machine learning tools such as Scikit-learn and Prophet and model a prediction
 
 # Showcase of Product
 1. This is the main landing page. Two figures will be shown on this page. This is the first figure:
